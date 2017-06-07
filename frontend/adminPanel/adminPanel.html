@@ -1,0 +1,37 @@
+<div class="adminPanel" id="anchor">
+<div ng-if="!vm.admin" class="adminLogin col-md-10 col-md-offset-1">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="login">Логин</label>
+				<div class="col-sm-10">
+					<input type="text" ng-model="vm.name" class="form-control" id="login">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="password">Пароль</label>
+				<div class="col-sm-10">
+					<input type="password" ng-model="vm.password" class="form-control" id="password">
+				</div>
+			</div>
+			<div class="form-group"> 
+				<div class="col-sm-offset-2 col-sm-4">
+					<p class="error" ng-show="vm.errorText.length>0">{{vm.errorText}}</p>
+					<button ng-click="vm.login()"  type="submit" class="btn btn-success">Войти</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<ul ng-if="vm.admin" class="col-md-10 col-md-offset-1">
+		<h2>Панель администратора</h2>
+		<li><a ui-sref="createCategory({type:'category'})">Добавить категорию</a></li>
+		<li><a ui-sref="removeCategory({type:'change'})">Изменить категорию</a></li>
+		<li><a ui-sref="createCategory({type:'subcategory'})">Добавить подкатегорию</a></li>
+		<li><a ui-sref="createProduct">Добавить товар</a></li>
+		<li><a ui-sref="createArticle">Добавить статью</a></li>
+		<li><a ui-sref="removeCategory({type:'category'})">Удалить категорию</a></li>
+		<li><a ui-sref="updateFields">Изменяемые поля</a></li>
+		<li><a ui-sref="createAction">Акции</a></li>
+		<li><a ui-sref="glavnaya">На главную</a></li>
+		<li><a ng-click="vm.logout()">Выйти</a></li>
+	</ul>
+</div>

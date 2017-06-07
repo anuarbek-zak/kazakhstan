@@ -1,0 +1,28 @@
+<div class="removeCategory" id="anchor">
+	<div class="container">
+		<div class="row">
+			<div class="form-group">
+			<button class="btn btn-primary" bs-dropdown>{{vm.currentCategory.name?vm.currentCategory.name:'Выберите категорию'}}</button>	
+				<ul class="dropdown-menu" role="menu">
+					<li class="category" ng-repeat="category in vm.categories | orderBy:'name'" ng-click="vm.currentCategory=category">{{category.name}}</li>
+				</ul>
+				<br>
+				<br>
+				<br>
+				<div ng-if="vm.type=='change'" class="form-group">
+					<label class="control-label col-xs-2" for="email">Название категории:</label>
+					<div class="col-xs-10">
+						<input type="text" ng-model="vm.currentCategory.name" class="form-control" id="email">
+					</div>
+				</div>
+				<br>	
+			</div> 
+			<div class="form-group"> 
+				<p ng-show="vm.showErr" class="error" >Выберите категорию</p>
+				<button ng-click="vm.remove()" ng-if="vm.type!='change'" type="submit" class="btn btn-danger">Удалить</button>
+				<button ng-click="vm.save()" ng-if="vm.type=='change'" type="submit" class="btn btn-success">Сохранить</button>
+			</div>
+		</div>
+	</div>
+	
+</div>

@@ -1,0 +1,22 @@
+<div class="productInfo">
+
+	<div class="container" >
+	<a class="back" ng-click="vm.goBack($event)" href="">К списку товаров</a>
+	<h3 ng-if="(vm.showErr.length>0)">{{vm.showErr}}</h3>
+		<div ng-if="!(vm.showErr.length>0)" class="row">
+			<div class="col-xs-5 images">
+				<img class="mainImg" src="../assets/img/products/{{vm.mainImg}}" alt="">
+				<div class="images_min">
+					<img ng-click="vm.mainImg=img" ng-repeat="img in vm.product.images" src="./assets/img/products/{{img}}" alt="">
+				</div>
+			</div>
+			<div class="col-xs-6 col-xs-offset-1">
+				<p class="name">{{vm.product.name}}</p>
+				<div class="description clearfix">
+					<text-angular class="text-angular" ta-disabled="true" ng-model="vm.product.description"></text-angular>
+					<button class="pull-right zakazat btn btn-lg" ui-sref="card({which:'writeUs',prodId:vm.id})" >Заказать</button>
+				</div>				
+			</div>				
+		</div>
+	</div>
+</div>

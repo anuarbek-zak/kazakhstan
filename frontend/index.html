@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru" data-livestyle-extension="available">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <title>Amabilis - салон мебели в Алматы</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+
+  <!--------------------- CSS ------------- -->
+  <link rel="stylesheet" href="commonCss/bootstrap.css">
+  <link rel="stylesheet" href="commonCss/index.css">
+  <link rel="stylesheet" href="commonCss/font-awesome.css">
+  <link rel="stylesheet" href="../bower_components/angular-carousel/dist/angular-carousel.min.css">
+  <link rel="stylesheet" href="../bower_components/angular-ui-carousel/dist/ui-carousel.min.css">
+  <link rel="stylesheet" href="glavnaya/glavnaya.css">
+  <link rel="stylesheet" href="articles/articles.css">
+  <link rel="stylesheet" href="articleInfo/articleInfo.css">
+  <link rel="stylesheet" href="showProducts/showProducts.css">
+  <link rel="stylesheet" href="adminPanel/adminPanel.css">
+  <link rel="stylesheet" href="productInfo/productInfo.css">
+  <link rel="stylesheet" href="card/card.css">
+  <link rel='stylesheet' href='../bower_components/textAngular/dist/textAngular.css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+</head>
+
+<body ng-app="myApp"  ng-cloak>
+  <header ng-controller="headerCtrl as vm">
+    <div class="container">
+     <div class="row">
+       <div class="pull-left">
+        <a  ui-sref="glavnaya"><img class="logo" src="assets/img/logo.png" alt="amabilis logo"></a>
+      </div>
+      <div class="pull-right contacts">
+        <p ng-hide="vm.contacts.address.length>0">Контакты :</p>
+        <p>Гор   <i class="fa fa-home"></i> {{vm.contacts.number}}</p>
+        <p>Моб   <i class="fa fa-whatsapp"></i> {{vm.contacts.mobile}}</p>
+        <p ng-if="vm.contacts.address.length>0">Адрес <i class="fa fa-map-marker"></i> {{vm.contacts.address}}</p>
+        <p  ng-if="vm.contacts.email">Почта {{vm.contacts.email}}</p>
+
+      </div>
+    </div> 
+  </div>
+
+</header>
+
+
+
+<div class="main_view" ui-view>
+</div>
+
+
+
+<footer ng-controller="footerCtrl as vm">
+<div>
+   <p>© 2015 <a href="http://amabilis.kz/">amabilis.kz</a></p>
+</div>
+  <div>
+      <a ui-sref="adminPanel">Панель администратора</a>
+      <p></p>
+      <a target="_blank" href="http://zakiryanov.kz/">Сайт разработал zakiryanov.kz</a>
+
+  </div>
+</footer>
+
+<!-------------------- JS  -------------------->
+<!-------------------- DEPENDENCIES -->
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../bower_components/ngstorage/ngStorage.js"></script>
+<script src="../bower_components/angular-strap/dist/angular-strap.min.js"></script>
+<script src="../bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+<script src="../bower_components/ng-file-upload/ng-file-upload-all.js"></script>
+<script src="../bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+<script src="../bower_components/angular-ui-carousel/dist/ui-carousel.min.js"></script>
+<script src='../bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+  <script src="../bower_components/textAngular/dist/textAngular.js"></script>
+    <script src="../bower_components/textAngular/dist/textAngular-sanitize.js"></script>
+    <script src="../bower_components/textAngular/dist/textAngularSetup.js"></script>
+<!--- --------------- MAIN SCRIPTS -->
+<script src="commonJS/index.module.js"></script>
+<script src="commonJS/index.route.js"></script>
+<script src="commonJS/index.js"></script>
+<!-- ----------------COMPONENTS  -->
+<script src="components/authService.js"></script>
+<!----------------- -CONTROLLERS -->
+<script src="glavnaya/glavnaya.js"></script>
+<script src="createCategory/createCategory.js"></script>
+<script src="createProduct/createProduct.js"></script>
+<script src="createArticle/createArticle.js"></script>
+<script src="updateFields/updateFields.js"></script>
+<script src="showProducts/showProducts.js"></script>
+<script src="adminPanel/adminPanel.js"></script>
+<script src="removeCategory/removeCategory.js"></script>
+<script src="productInfo/productInfo.js"></script>
+<script src="articles/articles.js"></script>
+<script src="articleInfo/articleInfo.js"></script>
+<script src="createAction/createAction.js"></script>
+<script src="card/card.js"></script>
+</body>
+</html>

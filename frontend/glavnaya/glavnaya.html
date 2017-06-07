@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="glavnaya.css">
+<div class="glavnaya">
+		<div class="sidebar">
+			<img class="ornament" src="../assets/img/ornament.png" alt="">
+			<div class="categories">
+				<div ui-sref-active='active-link' ng-click="vm.clickCategory(category)" class="category" ng-repeat="category in vm.categories">
+					<span   class="category-name" > <i class="dot">&bull;</i>	 {{category.name}}</span>
+					<i  ng-if="category.children.length>0" class="fa fa-chevron-circle-down"></i>
+					<div class="line"></div>
+					<div  class="subcategories">
+						<div class="subcategory"  ng-show="vm.selected==category._id" ng-repeat="subcategory in category.children">
+							<a ui-sref="showProducts({category_id:subcategory._id})"><i class="dot">&bull;</i> {{subcategory.name}}</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+	<div class="slider-cards">
+		<ui-carousel class="slider" slides="vm.slides" dots="true" slides-to-scroll="1"
+		autoplay="true"
+		arrow="false"
+		autoplay-speed="3000">
+		<carousel-item>
+			<img src="../assets/img/{{item}}" alt="">			
+		</carousel-item>
+	</ui-carousel>
+	<div class="cards">
+		<a ui-sref="card({which:'action'})" class="card">
+			<h3>акции</h3>
+			<i class="fa fa-percent"></i>	
+		</a>
+		<a ui-sref="card({which:'design'})" class="card">
+			<h3>дизайнерам</h3>
+			<i class="fa fa-umbrella"></i>	
+		</a>
+		<a ui-sref="articles" class="card">
+			<h3>статьи</h3>
+			<i class="fa fa-home"></i>	
+		</a>
+		<a ui-sref="card({which:'writeUs'})" class="card">
+			<h3>написать нам</h3>
+			<i class="fa fa-user"></i>	
+		</a>
+	</div>
+</div>
+</div>
