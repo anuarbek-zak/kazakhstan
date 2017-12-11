@@ -1,11 +1,68 @@
 {
 	"rus":{
-		
+		"section_1":{
+			"kaz":"Казахстан",
+			"welcome":"Добро пожаловать в сердце Евразии!",
+			"watchVideo":"Посмотреть видео",
+			"search":"Найти в Казахстане"
+		},
+		"section_2":{
+			"popularSearchTitle":"Популярные запросы: ",
+			"popularSearchText":" президент, Астана, горы, рестораны",
+			"newsTitle":"Новости",
+			"newsText":"Последние новости: Политика,правительство,нация,спорт,образование",
+			"aboutTitle":"О Казахстане",
+			"aboutText":"Исследуй страну: история,культура,ценности,достопримечательности",
+			"presidentTitle":"Президент",
+			"presidentText":"Лидер нации: Биография,конституция,Нур Отан,книги",
+			"kz2050Title":"Казахстан 2050",
+			"kz2050Text":"Время для отдыха: Концерты,кино,выставки",
+			"expoTitle":"Expo 2017",
+			"expoText":"Энергия будущего: События,Гости,Галлерея"
+		}
 	},
 	"eng":{
-
+		"section_1":{
+			"kaz":"kazakhstan",
+			"welcome":"Welcome to the heart of Eurasia!",
+			"watchVideo":"Watch the video",
+			"search":"Search in the Kazakhstan"
+		},
+		"section_2":{
+			"popularSearchTitle":"The most popular search keywords: ",
+			"popularSearchText":" president, Astana, mountain, restaurants",
+			"newsTitle":"News",
+			"newsText":"Latest news: Politics,entertaiment,nation,sport,education",
+			"aboutTitle":"About Kazakhstan",
+			"aboutText":"Explore country: history,culture,values,attractions",
+			"presidentTitle":"President",
+			"presidentText":"Leader of nations: Biography,constitution,Nur Otan,books",
+			"kz2050Title":"Kazakhstan 2050",
+			"kz2050Text":"It's time to have fun: concerns,cinema,exhibitions",
+			"expoTitle":"Expo 2017",
+			"expoText":"Future energy: Events,Guests,Gallery,Live stream"
+		}
 	},
 	"kaz":{
-		
+		"section_1":{
+			"kaz":"Қазқстан",
+			"welcome":"Добро пожаловать в сердце Евразии!",
+			"watchVideo":"Видео қарау",
+			"search":"Қазақстанда іздеу"
+		},
+		"section_2":{
+			"popularSearchTitle":"The most popular search keywords: ",
+			"popularSearchText":" president, Astana, mountain, restaurants",
+			"newsTitle":"News",
+			"newsText":"Latest news: Politics,entertaiment,nation,sport,education",
+			"aboutTitle":"About Kazakhstan",
+			"aboutText":"Explore country: history,culture,values,attractions",
+			"presidentTitle":"President",
+			"presidentText":"Leader of nations: Biography,constitution,Nur Otan,books",
+			"kz2050Title":"Kazakhstan 2050",
+			"kz2050Text":"It's time to have fun: concerns,cinema,exhibitions",
+			"expoTitle":"Expo 2017",
+			"expoText":"Future energy: Events,Guests,Gallery,Live stream"
+		}
 	}
 }
