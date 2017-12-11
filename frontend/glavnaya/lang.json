@@ -1,26 +1,4 @@
 {
-	"rus":{
-		"section_1":{
-			"kaz":"Казахстан",
-			"welcome":"Добро пожаловать в сердце Евразии!",
-			"watchVideo":"Посмотреть видео",
-			"search":"Найти в Казахстане"
-		},
-		"section_2":{
-			"popularSearchTitle":"Популярные запросы: ",
-			"popularSearchText":" президент, Астана, горы, рестораны",
-			"newsTitle":"Новости",
-			"newsText":"Последние новости: Политика,правительство,нация,спорт,образование",
-			"aboutTitle":"О Казахстане",
-			"aboutText":"Исследуй страну: история,культура,ценности,достопримечательности",
-			"presidentTitle":"Президент",
-			"presidentText":"Лидер нации: Биография,конституция,Нур Отан,книги",
-			"kz2050Title":"Казахстан 2050",
-			"kz2050Text":"Время для отдыха: Концерты,кино,выставки",
-			"expoTitle":"Expo 2017",
-			"expoText":"Энергия будущего: События,Гости,Галлерея"
-		}
-	},
 	"eng":{
 		"section_1":{
 			"kaz":"kazakhstan",
@@ -41,6 +19,35 @@
 			"kz2050Text":"It's time to have fun: concerns,cinema,exhibitions",
 			"expoTitle":"Expo 2017",
 			"expoText":"Future energy: Events,Guests,Gallery,Live stream"
+		},
+		"section_3":{
+			"title":"Latest popular news",
+			"bgText":"news",
+			"descriptionTitle":"Astana in the top 10 world bla bla",
+			"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ",
+			"readMore":"Read more >>"
+		}
+	},
+	"rus":{
+		"section_1":{
+			"kaz":"Казахстан",
+			"welcome":"Добро пожаловать в сердце Евразии!",
+			"watchVideo":"Смотреть видео",
+			"search":"Найти в Казахстане"
+		},
+		"section_2":{
+			"popularSearchTitle":"Популярные запросы: ",
+			"popularSearchText":" президент, Астана, горы, рестораны",
+			"newsTitle":"Новости",
+			"newsText":"Последние новости: Политика,правительство,нация,спорт,образование",
+			"aboutTitle":"О Казахстане",
+			"aboutText":"Исследуй страну: история,культура,ценности,достопримечательности",
+			"presidentTitle":"Президент",
+			"presidentText":"Лидер нации: Биография,конституция,Нур Отан,книги",
+			"kz2050Title":"Казахстан 2050",
+			"kz2050Text":"Время для отдыха: Концерты,кино,выставки",
+			"expoTitle":"Expo 2017",
+			"expoText":"Энергия будущего: События,Гости,Галлерея"
 		}
 	},
 	"kaz":{

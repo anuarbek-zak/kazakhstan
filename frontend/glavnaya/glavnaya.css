@@ -10,10 +10,7 @@
 }
 
 .glavnaya .main-background{
-	background-image: url('../assets/img/main.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	  background-image: url('../assets/img/main.jpg');
 	filter:brightness(85%);
 	position: absolute;
 	top: 0;
@@ -139,14 +136,15 @@ ul.breadcrumb li+li:before {
 	left: 0;
 }
 
-.glavnaya .section-2{
+.glavnaya .section-2,
+.glavnaya .section-3{
 	background-color: #f2fafc;
 	color: #333;
 	padding: 70px;
+	text-align: center;
 }
 
 .glavnaya .section-2 p{
-	text-align: center;
 	color:rgb(142, 142, 144);
 	font-size: 14px;
 }
@@ -210,4 +208,55 @@ ul.breadcrumb li+li:before {
 }
 .glavnaya .section-2 .blue .inner p{
 		color: #ddd
+}
+
+.glavnaya .section-3{
+	padding-top: 0;
+}
+
+.glavnaya .section-3 .title{
+	font-size: 32px;
+}
+
+.glavnaya .section-3 .card{
+	width: 45%;
+	border-radius: 5px;
+	background-color: #fff;
+	text-align: left;
+	position: relative;
+	z-index: 2;
+	top: -80px;
+}
+
+.glavnaya .section-3 .card .description{
+	padding: 15px;
+}
+
+.glavnaya .section-3 .card .title{
+	line-height: 1.7;
+	font-weight: normal;
+}
+
+.glavnaya .section-3 .card .text{
+	color: #555;
+	line-height: 1.2;
+	font-size: 14px;
+}
+
+.glavnaya .section-3 .card a{
+	color:#F8B242;
+	margin-left: 15px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.glavnaya .section-3 .card .bg-img{
+	height: 250px;
+	background-image: url('../assets/img/news1.jpg');
+	border-radius: 5px;
+}
+
+.glavnaya .section-3 .bg-text{
+	margin-top: -50px
 }

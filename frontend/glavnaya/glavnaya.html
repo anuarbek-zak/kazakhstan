@@ -1,6 +1,6 @@
 <div class="glavnaya">
 	<section class="section-1">
-		<div class="main-background"></div>
+		<div class="main-background bg-img"></div>
 		<div class="line-1 flex jc-sb">
 			<div class="langs">
 				<ul class="breadcrumb">
@@ -23,7 +23,7 @@
 			<input type="text" class="input" placeholder="{{vm.currentText.section_1.search}}">
 		</div>
 	</section>
-	<div class="section-2">
+	<section class="section-2">
 		<p><span>{{vm.currentText.section_2.popularSearchTitle}}</span>{{vm.currentText.section_2.popularSearchText}}</p>
 		<div class="cards flex flex-center">
 			<div class="card blue">
@@ -62,5 +62,29 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+	<section class="section-3">
+		<h3 class="title">{{vm.currentText.section_3.title}}</h3>
+		<div class="bg-text">
+					<p >{{vm.currentText.section_3.bgText}}</p>
+		</div>
+		<div class="cards flex jc-sa">
+			<div class="card">
+				<div class="bg-img"></div>
+				<div class="description">
+					<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
+					<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
+					<a href="">{{vm.currentText.section_3.readMore}}</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="bg-img"></div>
+				<div class="description">
+					<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
+					<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
+					<a href="">{{vm.currentText.section_3.readMore}}</a>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>

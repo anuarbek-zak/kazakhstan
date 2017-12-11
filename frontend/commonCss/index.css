@@ -203,11 +203,9 @@ body{
   align-items: center;
 }
 
-
 .title{
-  font-size: 40px;
-  color: #fff;
-  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .button{
@@ -244,6 +242,18 @@ body{
   color: #fff;
 }
 
+.bg-img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-text{
+  color: #E5EEF5;
+  font-size: 300px;
+  font-weight: bold;
+  text-align: center;
+}
 
 @media (min-width: 768px){
   .container {
