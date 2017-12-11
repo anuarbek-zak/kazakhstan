@@ -1,47 +1,38 @@
-<link rel="stylesheet" href="glavnaya.css">
 <div class="glavnaya">
-		<div class="sidebar">
-			<img class="ornament" src="../assets/img/ornament.png" alt="">
-			<div class="categories">
-				<div ui-sref-active='active-link' ng-click="vm.clickCategory(category)" class="category" ng-repeat="category in vm.categories">
-					<span   class="category-name" > <i class="dot">&bull;</i>	 {{category.name}}</span>
-					<i  ng-if="category.children.length>0" class="fa fa-chevron-circle-down"></i>
-					<div class="line"></div>
-					<div  class="subcategories">
-						<div class="subcategory"  ng-show="vm.selected==category._id" ng-repeat="subcategory in category.children">
-							<a ui-sref="showProducts({category_id:subcategory._id})"><i class="dot">&bull;</i> {{subcategory.name}}</a>
-						</div>
-					</div>
-				</div>	
+	<section class="section-1">
+		<div class="main-background"></div>
+		<div class="line-1 flex jc-sb">
+			<div class="langs">
+				<ul class="breadcrumb">
+					<li ng-class="{'active':vm.currentLang==name}" ng-click="vm.currentLang=name" ng-repeat="(name,label) in vm.langs" >{{label}} 
+					<img src="../assets/img/{{name}}.png" alt="{{name}}">
+					</li>
+				</ul>
+			</div>
+			<div ng-click="vm.isMenuOn=!vm.isMenuOn" ng-class="{'menu-on':vm.isMenuOn}" class="burger-menu">
+				<div class="burger"></div>  
 			</div>
 		</div>
-
-	<div class="slider-cards">
-		<ui-carousel class="slider" slides="vm.slides" dots="true" slides-to-scroll="1"
-		autoplay="true"
-		arrow="false"
-		autoplay-speed="3000">
-		<carousel-item>
-			<img src="../assets/img/{{item}}" alt="">			
-		</carousel-item>
-	</ui-carousel>
-	<div class="cards">
-		<a ui-sref="card({which:'action'})" class="card">
-			<h3>акции</h3>
-			<i class="fa fa-percent"></i>	
-		</a>
-		<a ui-sref="card({which:'design'})" class="card">
-			<h3>дизайнерам</h3>
-			<i class="fa fa-umbrella"></i>	
-		</a>
-		<a ui-sref="articles" class="card">
-			<h3>статьи</h3>
-			<i class="fa fa-home"></i>	
-		</a>
-		<a ui-sref="card({which:'writeUs'})" class="card">
-			<h3>написать нам</h3>
-			<i class="fa fa-user"></i>	
-		</a>
+		<div class="line-2 flex-column">
+			<img src="../assets/img/baiterek.png" alt="" class="baiterek">
+			<h1>kazakhstan</h1>
+			<h2>Welcome to the heart of Eurasia!</h2>
+			<button class="button blue">watch the video</button>
+		</div>
+		<div class="input-container flex jc-c">
+			<input type="text" class="input" placeholder="Search in the Kazakhstan">
+		</div>
+	</section>
+	<div class="section-2">
+		<p><b>The most popular search keywords:</b> president, Astana, mountain, restaurants</p>
+		<div class="cards flex flex-center">
+			<div class="card">
+				<div class="inner flex-column flex-center">
+					<img src="" alt="">
+					<h4></h4>
+					<p></p>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
 </div>

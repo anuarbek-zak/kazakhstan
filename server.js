@@ -7,34 +7,25 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 var User  = require('./server/models/User');
-
+var app = express();
 var mongoose = require('mongoose');
 var MongoStore = require('connect-mongo')(session);
-var passport = require('passport');
-// var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-// if(env === 'development'){
-	mongoose.connect('mongodb://localhost:27017/test');
-// }else {
-// 	mongoose.connect('mongodb://Anuarbek:14nur97@ds157248.mlab.com:57248/mydb');
-// }
-
-var app = express();
+mongoose.connect('mongodb://localhost:27017/kz');
 
 // Middlewares
-app.disable('view cache');
 //Compress our responses
 app.use(compression());
-
+app.use(cors());
 app.use(cookieParser());
 app.use(logger('dev'));
 app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.set('port', process.env.PORT || 8000);
+app.set('port', process.env.PORT || 3000);
 
-app.use(express.static(path.join(__dirname, 'frontend'), { maxAge: 3600000 }));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use(express.static(path.join(__dirname, 'frontend'), { maxAge: 3600000 }));
 
 app.use(session({ secret: 'your secret here',
 	resave:  true,
@@ -44,21 +35,10 @@ app.use(session({ secret: 'your secret here',
 }));
 
 
-app.use(passport.initialize());
-app.use(passport.session());
-
-var auth = require('./server/routes/auth');
 var routes = require('./server/routes/routes');	
-app.use('/',routes);
-app.use('/auth',auth);
 
-// Use of Passport user after login
-app.use(function(req, res, next) {	
-	if (req.user) {
-		res.cookie('user', JSON.stringify(req.user));
-	}
-	next();
-});
+app.use('/',routes);
+var users = [];
 
 app.use(function(err, req, res, next) {
 	console.error(err.stack);
@@ -67,5 +47,5 @@ app.use(function(err, req, res, next) {
 
 // Start server
 var server = app.listen(app.get('port'), function() {
-    console.log('Express server listening on port ' + app.get('port'));
+	console.log('Express server listening on port ' + app.get('port'));
 });

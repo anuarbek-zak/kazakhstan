@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-var contanctsSchema = new mongoose.Schema({
-		number:String,
-		mobile:String,
-		address:String,
-		email:String
+var schema = new mongoose.Schema({
+	phone:String,
+	address:String,
+	siteNumber:String
 });
 
-module.exports = mongoose.model('Contancts', contanctsSchema);
+module.exports = mongoose.model('Contacts', schema);
+	

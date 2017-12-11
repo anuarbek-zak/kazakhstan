@@ -1,1 +1,2 @@
-var myApp = angular.module('myApp', ['textAngular','ngFileUpload','ui.router','ngStorage','mgcrea.ngStrap','ui.carousel'])
+angular.module('myApp', ['ngAnimate','ngFileUpload','ui.router','ngStorage','mgcrea.ngStrap'])
+
