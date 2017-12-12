@@ -1,26 +1,28 @@
 <div class="glavnaya">
 	<section class="section-1">
 		<div class="main-background bg-img"></div>
-		<div class="line-1 flex jc-sb">
-			<div class="langs">
-				<ul class="breadcrumb">
-					<li ng-class="{'active':vm.currentLang==name}" ng-click="vm.changeLang(name)" ng-repeat="(name,label) in vm.langs" >{{label}} 
-					<img src="../assets/img/{{name}}.png" alt="{{name}}">
-					</li>
-				</ul>
+		<div class="section-inner">
+			<div class="line-1 flex jc-sb">
+				<div class="langs">
+					<ul class="breadcrumb">
+						<li ng-class="{'active':vm.currentLang==name}" ng-click="vm.changeLang(name)" ng-repeat="(name,label) in vm.langs" >{{label}} 
+							<img src="../assets/img/{{name}}.png" alt="{{name}}">
+						</li>
+					</ul>
+				</div>
+				<div ng-click="vm.isMenuOn=!vm.isMenuOn" ng-class="{'menu-on':vm.isMenuOn}" class="burger-menu">
+					<div class="burger"></div>  
+				</div>
 			</div>
-			<div ng-click="vm.isMenuOn=!vm.isMenuOn" ng-class="{'menu-on':vm.isMenuOn}" class="burger-menu">
-				<div class="burger"></div>  
+			<div class="line-2 flex-column">
+				<img src="../assets/img/baiterek.png" alt="" class="baiterek">
+				<h1>{{vm.currentText.section_1.kaz}}</h1>
+				<h2>{{vm.currentText.section_1.welcome}}</h2>
+				<button class="button blue">{{vm.currentText.section_1.watchVideo}}</button>
 			</div>
-		</div>
-		<div class="line-2 flex-column">
-			<img src="../assets/img/baiterek.png" alt="" class="baiterek">
-			<h1>{{vm.currentText.section_1.kaz}}</h1>
-			<h2>{{vm.currentText.section_1.welcome}}</h2>
-			<button class="button blue">{{vm.currentText.section_1.watchVideo}}</button>
-		</div>
-		<div class="input-container flex jc-c">
-			<input type="text" class="input" placeholder="{{vm.currentText.section_1.search}}">
+			<div class="input-container flex jc-c">
+				<input type="text" class="input" placeholder="{{vm.currentText.section_1.search}}">
+			</div>
 		</div>
 	</section>
 	<section class="section-2">
@@ -66,7 +68,7 @@
 	<section class="section-3">
 		<h3 class="title">{{vm.currentText.section_3.title}}</h3>
 		<div class="bg-text">
-					<p >{{vm.currentText.section_3.bgText}}</p>
+			<p >{{vm.currentText.section_3.bgText}}</p>
 		</div>
 		<div class="cards flex jc-sa">
 			<div class="card">
@@ -82,9 +84,36 @@
 				<div class="description">
 					<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
 					<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
-					<a href="">{{vm.currentText.section_3.readMore}}</a>
+					<a href="">{{vm.currentText.readMore}}</a>
 				</div>
 			</div>
+		</div>
+	</section>
+	<section class="section-4">
+		<div class="section-inner flex jc-sb ai-c">
+			<img src="../assets/img/map_siluet.jpg" alt="kz map">
+			<div class="description">
+				<h4 class="title">{{vm.currentText.section_4.descriptionTitle.first}}</h4>
+				<p class="text">{{vm.currentText.section_4.descriptionText.first}}</p>
+				<h4 class="title">{{vm.currentText.section_4.descriptionTitle.second}}</h4>
+				<p class="text">{{vm.currentText.section_4.descriptionText.second}}</p>
+			</div>
+		</div>
+		<button class="button">{{vm.currentText.readMore}}</button>
+	</section>
+	<section class="section-5">
+		<h3 class="title">{{vm.currentText.section_5.title}}</h3>
+		<div class="bg-text">
+			<p >{{vm.currentText.section_5.bgText}}</p>
+		</div>
+		<div class="section-inner flex jc-sa">
+			<div class="description">
+				<i>{{vm.currentText.section_5.quote}}</i>
+				<p>{{vm.currentText.section_5.quoteBy}}</p>
+						<button class="button blue">{{vm.currentText.readMore}}</button>
+
+			</div>
+			<img src="../assets/img/president.jpg" alt="kz map">
 		</div>
 	</section>
 </div>

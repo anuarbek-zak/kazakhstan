@@ -10,7 +10,7 @@ var User  = require('./server/models/User');
 var app = express();
 var mongoose = require('mongoose');
 var MongoStore = require('connect-mongo')(session);
-mongoose.connect('mongodb://localhost:27017/kz');
+// mongoose.connect('mongodb://localhost:27017/kz');
 
 // Middlewares
 //Compress our responses

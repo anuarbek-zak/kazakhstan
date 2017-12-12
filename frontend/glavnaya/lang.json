@@ -1,5 +1,6 @@
 {
 	"eng":{
+		"readMore":"Read more",
 		"section_1":{
 			"kaz":"kazakhstan",
 			"welcome":"Welcome to the heart of Eurasia!",
@@ -24,8 +25,23 @@
 			"title":"Latest popular news",
 			"bgText":"news",
 			"descriptionTitle":"Astana in the top 10 world bla bla",
-			"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ",
-			"readMore":"Read more >>"
+			"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+		},
+		"section_4":{
+			"descriptionTitle":{
+				"first":"About Kazakhstan",
+				"second":"History"
+			},
+			"descriptionText":{
+				"first":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+				"second":"It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source."
+			}
+		},
+		"section_5":{
+			"title":"First President of Kazakhstan",
+			"bgText":"leader",
+			"quoteBy":"Abishevich Nursultan Nazarbayev",
+			"quote":"«We must strive to encourage East and West not only to move towards each other but also to encourage them to find a new philosophy, a philosophy which will serve as a tool determining the future of Planet Earth - our common and only shelte»"
 		}
 	},
 	"rus":{
