@@ -347,18 +347,21 @@ ul.breadcrumb li+li:before {
 	margin: 40px 0;
 }
 
-.glavnaya .section-6{
+.glavnaya .section-6,
+.glavnaya .section-7{
 	padding: 100px;
 }
 
-.glavnaya .section-6 .title{
-	font-size: 28px;
+.glavnaya .section-6 .title,
+.glavnaya .section-7 .title{
+	font-size: 32px;
 	margin-bottom: -25px;
 	text-align: center;
-font-weight: normal;
+	font-weight: normal;
 }
 
-.glavnaya .section-6 .text{
+.glavnaya .section-6 .text,
+.glavnaya .section-7 .text{
 	color:#666 ;
 	margin: 63px 0;
 	line-height: 1.6;
@@ -367,18 +370,46 @@ font-weight: normal;
 
 .glavnaya .section-6 .card{
 	border-radius: 5px;
-	width: 40%;
+	width: 60%;
+	height: 300px;
 	z-index: 1;
-	padding: 30px 75px;
-	background-color: #fff
+	padding: 30px 55px;
+	background-color: #fff;
+	text-align: left;
+	background-image: url('../assets/img/frame_angletop.png');
+	background-repeat: no-repeat;
+	background-position: 30px 25px;
+	background-size: 35px 35px
 }
 
+.glavnaya .section-6 .card .corner{
+	width: 108%;
+	height: 35px;	
+	background-image: url('../assets/img/frame_anglebott.png');
+	background-repeat: no-repeat;
+	background-position: 95% 10%;
+	background-size: 35px 35px
+}
+
+.glavnaya .section-6 .card h4{
+	font-size: 24px;
+	margin-bottom: 25px;
+	margin-top: 15px;
+	color: #555;
+}
+
+.glavnaya .section-6 .card p{
+	color: #777;
+	line-height: 1.5;
+}
 
 .glavnaya .section-6 .bg-img{
 	border-radius: 5px;
-	width: 60%;
-	height: 380px;
+	width: 80%;
+	height: 400px;
 	z-index: 0;
 	background-image: url('../assets/img/2050.jpg');
-	margin-left: -100px;
+	left: -50px;	
+	position: relative;
+
 }
