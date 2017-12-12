@@ -25,95 +25,104 @@
 			</div>
 		</div>
 	</section>
-	<section class="section-2">
-		<p><span>{{vm.currentText.section_2.popularSearchTitle}}</span>{{vm.currentText.section_2.popularSearchText}}</p>
-		<div class="cards flex flex-center">
-			<div class="card blue">
-				<div class="inner flex-column">
-					<img src="../assets/img/news_selected.png" alt="news">
-					<h4>{{vm.currentText.section_2.newsTitle}}</h4>
-					<p>{{vm.currentText.section_2.newsText}}</p>
+	<div class="bg-img long-bg">
+		<section class="section-2">
+			<p><span>{{vm.currentText.section_2.popularSearchTitle}}</span>{{vm.currentText.section_2.popularSearchText}}</p>
+			<div class="cards flex flex-center">
+				<div class="card blue">
+					<div class="inner flex-column">
+						<img src="../assets/img/news_selected.png" alt="news">
+						<h4>{{vm.currentText.section_2.newsTitle}}</h4>
+						<p>{{vm.currentText.section_2.newsText}}</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="inner flex-column">
+						<img src="../assets/img/kazakhstan.png" alt="news">
+						<h4>{{vm.currentText.section_2.aboutTitle}}</h4>
+						<p>{{vm.currentText.section_2.aboutText}}</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="inner flex-column">
+						<img src="../assets/img/president.png" alt="news">
+						<h4>{{vm.currentText.section_2.presidentTitle}}</h4>
+						<p>{{vm.currentText.section_2.presidentText}}</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="inner flex-column">
+						<img src="../assets/img/kz2050.png" alt="news">
+						<h4>{{vm.currentText.section_2.kz2050Title}}</h4>
+						<p>{{vm.currentText.section_2.kz2050Text}}</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="inner flex-column">
+						<img src="../assets/img/expo.png" alt="news">
+						<h4>{{vm.currentText.section_2.expoTitle}}</h4>
+						<p>{{vm.currentText.section_2.expoText}}</p>
+					</div>
 				</div>
 			</div>
-			<div class="card">
-				<div class="inner flex-column">
-					<img src="../assets/img/kazakhstan.png" alt="news">
-					<h4>{{vm.currentText.section_2.aboutTitle}}</h4>
-					<p>{{vm.currentText.section_2.aboutText}}</p>
+		</section>
+		<section class="section-3">
+			<h3 class="title">{{vm.currentText.section_3.title}}</h3>
+			<div class="cards flex jc-sa">
+				<div class="card">
+					<div class="bg-img"></div>
+					<div class="description">
+						<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
+						<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
+						<a href="">{{vm.currentText.section_3.readMore}}</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="bg-img"></div>
+					<div class="description">
+						<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
+						<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
+						<a href="">{{vm.currentText.readMore}}</a>
+					</div>
 				</div>
 			</div>
-			<div class="card">
-				<div class="inner flex-column">
-					<img src="../assets/img/president.png" alt="news">
-					<h4>{{vm.currentText.section_2.presidentTitle}}</h4>
-					<p>{{vm.currentText.section_2.presidentText}}</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="inner flex-column">
-					<img src="../assets/img/kz2050.png" alt="news">
-					<h4>{{vm.currentText.section_2.kz2050Title}}</h4>
-					<p>{{vm.currentText.section_2.kz2050Text}}</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="inner flex-column">
-					<img src="../assets/img/expo.png" alt="news">
-					<h4>{{vm.currentText.section_2.expoTitle}}</h4>
-					<p>{{vm.currentText.section_2.expoText}}</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section-3">
-		<h3 class="title">{{vm.currentText.section_3.title}}</h3>
-		<div class="bg-text">
-			<p >{{vm.currentText.section_3.bgText}}</p>
-		</div>
-		<div class="cards flex jc-sa">
-			<div class="card">
-				<div class="bg-img"></div>
+		</section>
+		<section class="section-4">
+			<div class="bg-img"></div>
+			<div class="section-inner flex jc-sb ai-c">
+				<img src="../assets/img/map_siluet.png" alt="kz map">
 				<div class="description">
-					<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
-					<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
-					<a href="">{{vm.currentText.section_3.readMore}}</a>
+					<h4 class="title">{{vm.currentText.section_4.descriptionTitle.first}}</h4>
+					<p class="text">{{vm.currentText.section_4.descriptionText.first}}</p>
+					<h4 class="title">{{vm.currentText.section_4.descriptionTitle.second}}</h4>
+					<p class="text">{{vm.currentText.section_4.descriptionText.second}}</p>
 				</div>
 			</div>
-			<div class="card">
-				<div class="bg-img"></div>
+			<button class="button">{{vm.currentText.readMore}}</button>
+		</section>
+		<section class="section-5">
+			<h3 class="title">{{vm.currentText.section_5.title}}</h3>
+			<div class="section-inner flex jc-sa">
 				<div class="description">
-					<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
-					<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
-					<a href="">{{vm.currentText.readMore}}</a>
+					<i>{{vm.currentText.section_5.quote}}</i>
+					<p>{{vm.currentText.section_5.quoteBy}}</p>
+					<button class="button blue">{{vm.currentText.readMore}}</button>
 				</div>
+				<img src="../assets/img/nurik.png" alt="kz map">
 			</div>
-		</div>
-	</section>
-	<section class="section-4">
-		<div class="section-inner flex jc-sb ai-c">
-			<img src="../assets/img/map_siluet.jpg" alt="kz map">
-			<div class="description">
-				<h4 class="title">{{vm.currentText.section_4.descriptionTitle.first}}</h4>
-				<p class="text">{{vm.currentText.section_4.descriptionText.first}}</p>
-				<h4 class="title">{{vm.currentText.section_4.descriptionTitle.second}}</h4>
-				<p class="text">{{vm.currentText.section_4.descriptionText.second}}</p>
+		</section>
+		<section class="section-6">
+			<h3 class="title">{{vm.currentText.section_6.title}}</h3>
+			<p class="text">{{vm.currentText.section_6.text}}</p>
+			<div class="section-innner flex ai-c jc-sb">
+				<div class="card">
+					<h4>{{vm.currentText.section_6.card.title}}</h4>
+					<p>
+						{{vm.currentText.section_6.card.text}}
+					</p>
+				</div>
+				<div class="bg-img"></div>
 			</div>
-		</div>
-		<button class="button">{{vm.currentText.readMore}}</button>
-	</section>
-	<section class="section-5">
-		<h3 class="title">{{vm.currentText.section_5.title}}</h3>
-		<div class="bg-text">
-			<p >{{vm.currentText.section_5.bgText}}</p>
-		</div>
-		<div class="section-inner flex jc-sa">
-			<div class="description">
-				<i>{{vm.currentText.section_5.quote}}</i>
-				<p>{{vm.currentText.section_5.quoteBy}}</p>
-						<button class="button blue">{{vm.currentText.readMore}}</button>
-
-			</div>
-			<img src="../assets/img/president.jpg" alt="kz map">
-		</div>
-	</section>
+		</section>
+	</div>
 </div>

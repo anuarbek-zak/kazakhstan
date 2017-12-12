@@ -2,11 +2,20 @@
 		background-color: #f2fafc;
 }
 
+.long-bg{
+		background-image: url('../assets/img/bg.jpg');
+		background-position: center -570px;
+}
+
 .glavnaya .section-1{
 	height: 650px;
 	color: #fff;
 	padding: 0 100px;
 	position: relative;
+}
+
+.glavnaya .section-1 .button{
+	padding: 15px 30px;
 }
 
 .glavnaya .section-1 .section-inner{
@@ -21,12 +30,12 @@
 .glavnaya .main-background{
 	background-image: url('../assets/img/main.jpg');
 	filter:brightness(85%);
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 0;
+	 position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 .glavnaya .section-1 .line-2{
@@ -145,6 +154,10 @@ ul.breadcrumb li+li:before {
 	left: 0;
 }
 
+.glavnaya .input-container .input{
+	width: 60%;
+}
+
 .glavnaya .section-2,
 .glavnaya .section-3{
 	color: #333;
@@ -231,9 +244,8 @@ ul.breadcrumb li+li:before {
 	border-radius: 5px;
 	background-color: #fff;
 	text-align: left;
-	position: relative;
 	z-index: 2;
-	top: -80px;
+	margin-top: 155px;
 }
 
 .glavnaya .section-3 .card .description{
@@ -265,12 +277,9 @@ ul.breadcrumb li+li:before {
 	border-radius: 5px 5px 0 0;
 }
 
-.glavnaya .section-3 .bg-text{
-	margin-top: -50px
-}
-
 .glavnaya .section-4{
 	padding: 100px;
+	position: relative;
 }
 
 .glavnaya .section-4 img{
@@ -306,31 +315,21 @@ ul.breadcrumb li+li:before {
 }
 
 .glavnaya .section-5{
-	background-color: #CCE3F1
-}
-
-.glavnaya .section-5{
 	text-align: center;
 	padding:90px 120px;
 }
 
 .glavnaya .section-5 .title{
 	font-size: 26px;
-	margin-bottom: -25px;
+	margin: 100px;
 }
 
 .glavnaya .section-5 img{
 	width: 35%;
 }
 
-.glavnaya .section-5 .bg-text{
-	font-size: 250px;
-	color: #C8DDEC;
-}
-
 .glavnaya .section-5 .section-inner{
 	text-align: left;
-	margin-top: -130px;
 }
 
 .glavnaya .section-5 i{
@@ -346,4 +345,40 @@ ul.breadcrumb li+li:before {
 	font-size: 24px;
 	color: #444;
 	margin: 40px 0;
+}
+
+.glavnaya .section-6{
+	padding: 100px;
+}
+
+.glavnaya .section-6 .title{
+	font-size: 28px;
+	margin-bottom: -25px;
+	text-align: center;
+font-weight: normal;
+}
+
+.glavnaya .section-6 .text{
+	color:#666 ;
+	margin: 63px 0;
+	line-height: 1.6;
+	text-align: left;
+}
+
+.glavnaya .section-6 .card{
+	border-radius: 5px;
+	width: 40%;
+	z-index: 1;
+	padding: 30px 75px;
+	background-color: #fff
+}
+
+
+.glavnaya .section-6 .bg-img{
+	border-radius: 5px;
+	width: 60%;
+	height: 380px;
+	z-index: 0;
+	background-image: url('../assets/img/2050.jpg');
+	margin-left: -100px;
 }
