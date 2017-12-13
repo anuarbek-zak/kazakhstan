@@ -1,2 +1,2 @@
-angular.module('myApp', ['ngAnimate','ngFileUpload','ui.router','ngStorage','mgcrea.ngStrap'])
+angular.module('myApp', ['ngAnimate','ui.router','ngStorage','mgcrea.ngStrap'])
 

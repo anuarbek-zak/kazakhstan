@@ -325,7 +325,8 @@ ul.breadcrumb li+li:before {
 }
 
 .glavnaya .section-5 img{
-	width: 35%;
+	width: 260px;
+	height:400px;
 }
 
 .glavnaya .section-5 .section-inner{
@@ -370,7 +371,7 @@ ul.breadcrumb li+li:before {
 
 .glavnaya .section-6 .card{
 	border-radius: 5px;
-	width: 60%;
+	width: 58%;
 	height: 300px;
 	z-index: 1;
 	padding: 30px 55px;
@@ -387,7 +388,7 @@ ul.breadcrumb li+li:before {
 	height: 35px;	
 	background-image: url('../assets/img/frame_anglebott.png');
 	background-repeat: no-repeat;
-	background-position: 95% 10%;
+	background-position: 100% 10%;
 	background-size: 35px 35px
 }
 
@@ -411,5 +412,25 @@ ul.breadcrumb li+li:before {
 	background-image: url('../assets/img/2050.jpg');
 	left: -50px;	
 	position: relative;
+}
 
+
+.glavnaya .section-6 .slider img{
+	border-radius: 5px
+}
+
+.glavnaya .section-6 .slider .left{
+	left: 17% !important;
+}
+
+.glavnaya .section-6 .slider .right{
+	right: 17% !important;
+}
+
+.glavnaya .section-6 .slider .left,
+.glavnaya .section-6 .slider .right{
+	width: 90px;
+	height: 90px;
+	top: 40% !important;
+	cursor: pointer;
 }
