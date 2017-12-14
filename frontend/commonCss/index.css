@@ -154,6 +154,10 @@ table {
  font-family: "Clear Sans";
  src: url("../assets/fonts/clearsans-1.00/TTF/ClearSans-Regular.ttf")
 }
+@font-face {
+ font-family: "Avenir";
+ src: url("../assets/fonts/AvenirNextCyr/AvenirNextCyr-Medium.ttf")
+}
 
 body{
   font-family: 'Clear Sans', sans-serif;
@@ -178,6 +182,10 @@ body{
   -ms-flex-direction: column;
   -o-flex-direction: column;
   flex-direction: column;
+}
+
+.flex-reverse{
+  flex-direction: row-reverse;
 }
 
 .jc-c{
