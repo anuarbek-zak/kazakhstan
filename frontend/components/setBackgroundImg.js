@@ -5,7 +5,7 @@ angular.module('myApp').directive('setBackgroundImg',function() {
         },
 	    link: function(scope, element, attr) {
 	    	attr.$observe('src', function(){
-     			element.css('background-image','url(../photos/'+scope.src+')');
+     			element.css('background-image','url('+scope.src+')');
 			});
 	    	
 	    }

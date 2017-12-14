@@ -7,5 +7,11 @@ angular.module('myApp')
                 controller:'glavnayaCtrl',
                 controllerAs:'vm'
             })
+            .state('tourism', {
+                url: '/tourism',
+                templateUrl: 'tourism/tourism.html',
+                controller:'tourismCtrl',
+                controllerAs:'vm'
+            })
         $urlRouterProvider.otherwise('/glavnaya');
     });

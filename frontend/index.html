@@ -12,38 +12,119 @@
 
   <!--------------------- CSS ------------- -->
   <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
   <link rel="stylesheet" href="commonCss/index.css">
   <!-- <link rel="stylesheet" href="commonCss/font-awesome.css"> -->
   <link rel="stylesheet" href="glavnaya/glavnaya.css">
+  <link rel="stylesheet" href="tourism/tourism.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
-<body ng-app="myApp"  ng-cloak>
+<body ng-app="myApp" ng-controller="rootCtrl as vm"  ng-cloak>
 
- <div class="main_view" ui-view>
- </div>
+<header ng-controller="headerCtrl as vm">
+    <div class="header-inner flex jc-sb">
+      <div class="langs">
+        <ul class="breadcrumb">
+          <li ng-class="{'active':vm.currentLang==name}" ng-click="vm.changeLang(name)" ng-repeat="(name,label) in vm.langs" >{{label}} 
+            <img src="../assets/img/{{name}}.png" alt="{{name}}">
+          </li>
+        </ul>
+      </div>
+      <div ng-click="vm.isShowMenu=true"  class="burger-menu">
+        <div ng-click="vm.isShowMenu=true" class="burger"></div>  
+      </div>
+    </div>
 
- <footer ng-controller="footerCtrl as vm" class="flex" >
-   
- </footer>
 
- <script src="../bower_components/jquery-1.11.3.min/index.js"></script>
- <script src="../bower_components/angular/angular.js"></script>
- <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
- <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
- <script src="../bower_components/ngstorage/ngStorage.js"></script>
- <script src="../bower_components/angular-strap/dist/angular-strap.min.js"></script>
- <script src="../bower_components/carousel/js/Carousel.js"></script>
- <!--- --------------- MAIN SCRIPTS -->
- <script src="commonJS/index.module.js"></script>
- <script src="commonJS/index.route.js"></script>
- <script src="commonJS/index.js"></script>
- <!-- ----------------COMPONENTS  -->
- <script src="components/authService.js"></script>
- <script src="components/setBackgroundImg.js"></script>
- <!----------------- -CONTROLLERS -->
- <script src="glavnaya/glavnaya.js"></script>
+    
+<div ng-if="vm.isShowMenu" class="bg-black flex jc-fe">
+  <div class="menu">
+    <div class="flex jc-fe">
+      <span ng-click="vm.isShowMenu=false" class="close">&times;</span>
+    </div>
+    <ul ng-click="vm.isShowMenu=false" >
+      <li><a ui-sref="glavnaya" >{{vm.currentText.menu.home}}</a></li>
+      <li><a href="">{{vm.currentText.menu.about}}</a></li>
+      <li><a href="">{{vm.currentText.menu.culture}}</a></li>
+      <li><a ui-sref="tourism">{{vm.currentText.menu.tourism}}</a></li>
+      <li><a href="">{{vm.currentText.menu.president}}</a></li>
+    </ul>
+    <div class="flex jc-fe">
+          <button class="button blue">{{vm.currentText.menu.openMap}}</button>
+    </div>
+  </div>
+</div>
+  </header>
+  <div class="main_view" ui-view>
+  </div>
 
+  
+  <footer ng-controller="footerCtrl as vm">
+    <div class="footer-big flex jc-c">
+      <div class="column">
+        <h4>company</h4>
+        <ul>
+          <li>About</li>
+          <li>Culture and traditions</li>
+          <li>Tourism</li>
+          <li>Leader of the Nation</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>company</h4>
+        <ul>
+          <li>About</li>
+          <li>Culture and traditions</li>
+          <li>Tourism</li>
+          <li>Leader of the Nation</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>company</h4>
+        <ul>
+          <li>About</li>
+          <li>Culture and traditions</li>
+          <li>Tourism</li>
+          <li>Leader of the Nation</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>company</h4>
+        <ul>
+          <li>About</li>
+          <li>Culture and traditions</li>
+          <li>Tourism</li>
+          <li>Leader of the Nation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-small">&copy;{{vm.currentYear}} All rights reserved.</div>
+  </footer>
+
+
+  <script src="../bower_components/jquery-1.11.3.min/index.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="../bower_components/ngstorage/ngStorage.js"></script>
+  <script src="../bower_components/angular-strap/dist/angular-strap.min.js"></script>
+  <script src="../bower_components/carousel/js/Carousel.js"></script>
+  <script src="../bower_components/angular-scroll/angular-scroll.min.js"></script>
+  <script src="../bower_components/wow/dist/wow.min.js"></script>
+  <!--- --------------- MAIN SCRIPTS -->
+  <script src="commonJS/index.module.js"></script>
+  <script src="commonJS/index.route.js"></script>
+  <script src="commonJS/index.js"></script>
+  <!-- ----------------COMPONENTS  -->
+  <script src="components/authService.js"></script>
+  <script src="components/setBackgroundImg.js"></script>
+  <!----------------- -CONTROLLERS -->
+  <script src="glavnaya/glavnaya.js"></script>
+  <script src="tourism/tourism.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 
 </body>
 </html>

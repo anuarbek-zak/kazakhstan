@@ -2,71 +2,31 @@
 	<section class="section-1">
 		<div class="main-background bg-img"></div>
 		<div class="section-inner">
-			<div class="line-1 flex jc-sb">
-				<div class="langs">
-					<ul class="breadcrumb">
-						<li ng-class="{'active':vm.currentLang==name}" ng-click="vm.changeLang(name)" ng-repeat="(name,label) in vm.langs" >{{label}} 
-							<img src="../assets/img/{{name}}.png" alt="{{name}}">
-						</li>
-					</ul>
-				</div>
-				<div ng-click="vm.isMenuOn=!vm.isMenuOn" ng-class="{'menu-on':vm.isMenuOn}" class="burger-menu">
-					<div class="burger"></div>  
-				</div>
-			</div>
 			<div class="line-2 flex-column">
 				<img src="../assets/img/baiterek.png" alt="" class="baiterek">
 				<h1>{{vm.currentText.section_1.kaz}}</h1>
 				<h2>{{vm.currentText.section_1.welcome}}</h2>
-				<button class="button blue">{{vm.currentText.section_1.watchVideo}}</button>
+				<button ng-click="vm.isShowVideo=!vm.isShowVideo" class="wow slideOutTop button blue">{{vm.currentText.section_1.watchVideo}}</button>
 			</div>
-			<div class="input-container flex jc-c">
-				<input type="text" class="input" placeholder="{{vm.currentText.section_1.search}}">
-			</div>
+			<form class="input-container flex jc-c" ng-submit="vm.submitQuery()">
+				<input type="text" ng-model="vm.query" class="input" placeholder="{{vm.currentText.section_1.search}}">
+			</form>
 		</div>
 	</section>
 	<div class="bg-img long-bg">
 		<section class="section-2">
 			<p><span>{{vm.currentText.section_2.popularSearchTitle}}</span>{{vm.currentText.section_2.popularSearchText}}</p>
-			<div class="cards flex flex-center">
-				<div class="card blue">
+			<div  class="cards flex flex-center">
+				<div ng-repeat="(label, sectNumber) in vm.scrollCards" ng-click="vm.goToSection(sectNumber)" ng-class="{'blue':sectNumber==vm.selectedSection}" class="card">
 					<div class="inner flex-column">
-						<img src="../assets/img/news_selected.png" alt="news">
-						<h4>{{vm.currentText.section_2.newsTitle}}</h4>
-						<p>{{vm.currentText.section_2.newsText}}</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="inner flex-column">
-						<img src="../assets/img/kazakhstan.png" alt="news">
-						<h4>{{vm.currentText.section_2.aboutTitle}}</h4>
-						<p>{{vm.currentText.section_2.aboutText}}</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="inner flex-column">
-						<img src="../assets/img/president.png" alt="news">
-						<h4>{{vm.currentText.section_2.presidentTitle}}</h4>
-						<p>{{vm.currentText.section_2.presidentText}}</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="inner flex-column">
-						<img src="../assets/img/kz2050.png" alt="news">
-						<h4>{{vm.currentText.section_2.kz2050Title}}</h4>
-						<p>{{vm.currentText.section_2.kz2050Text}}</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="inner flex-column">
-						<img src="../assets/img/expo.png" alt="news">
-						<h4>{{vm.currentText.section_2.expoTitle}}</h4>
-						<p>{{vm.currentText.section_2.expoText}}</p>
+						<img src="../assets/img/{{sectNumber==vm.selectedSection?label+'_selected':label}}.png" alt="news">
+						<h4>{{vm.currentText.section_2[label+"Title"]}}</h4>
+						<p>{{vm.currentText.section_2[label+"Text"]}}</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="section-3">
+		<section class="section-3" id="section-3">
 			<h3 class="title">{{vm.currentText.section_3.title}}</h3>
 			<div class="cards flex jc-sa">
 				<div class="card">
@@ -74,7 +34,7 @@
 					<div class="description">
 						<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
 						<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
-						<a href="">{{vm.currentText.section_3.readMore}}</a>
+						<a href="">{{vm.currentText.readMore}} >></a>
 					</div>
 				</div>
 				<div class="card">
@@ -82,12 +42,12 @@
 					<div class="description">
 						<h4 class="title">{{vm.currentText.section_3.descriptionTitle}}</h4>
 						<span class="text">{{vm.currentText.section_3.descriptionText}}</span>
-						<a href="">{{vm.currentText.readMore}}</a>
+						<a href="">{{vm.currentText.readMore}} >></a>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="section-4">
+		<section class="section-4" id="section-4">
 			<div class="bg-img"></div>
 			<div class="section-inner flex jc-sb ai-c">
 				<img src="../assets/img/map_siluet.png" alt="kz map">
@@ -100,7 +60,7 @@
 			</div>
 			<button class="button">{{vm.currentText.readMore}}</button>
 		</section>
-		<section class="section-5">
+		<section class="section-5" id="section-5">
 			<h3 class="title">{{vm.currentText.section_5.title}}</h3>
 			<div class="section-inner flex jc-sa">
 				<div class="description">
@@ -111,7 +71,7 @@
 				<img src="../assets/img/nurik.png" alt="kz map">
 			</div>
 		</section>
-		<section class="section-6">
+		<section class="section-6" id="section-6">
 			<h3 class="title">{{vm.currentText.section_6.title}}</h3>
 			<p class="text">{{vm.currentText.section_6.text}}</p>
 			<div class="section-innner flex ai-c jc-sb">
@@ -125,7 +85,7 @@
 				<div class="bg-img"></div>
 			</div>
 		</section>
-		<section class="section-6">
+		<section class="section-7" id="section-7">
 			<h3 class="title">{{vm.currentText.section_7.title}}</h3>
 			<p class="text">{{vm.currentText.section_7.text}}</p>
 			<div class="slider" id="container">
@@ -152,9 +112,18 @@
 
 		</section>
 	</div>
-	
-	<footer>
-		<div class="footer-big"></div>
-		<div class="footer-small">&copy;{{vm.currentYear}} All rights reserved.</div>
-	</footer>
+
+	<div ng-if="vm.isShowVideo" class="bg-black flex flex-center">
+		<div  class="modal-content">
+			<div class="flex">
+				<span ng-click="vm.isShowVideo=false" class="close">&times;</span>
+			</div>
+			<iframe width="620" height="415"
+			src="https://www.youtube.com/embed/vQx6-o2rFK8">
+		</iframe> 
+	</div>
+
+
 </div>
+</div>
+
