@@ -13,6 +13,8 @@
     "angular-ui-router": "~0.2.15",
     "ngstorage": "^0.3.11",
     "angular-strap": "^2.3.12",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "bxslider": "*",
+    "slick-carousel": "^1.8.1"
   }
 }

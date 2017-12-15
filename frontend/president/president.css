@@ -12,7 +12,7 @@
 }
 
 .president .section-1 .main-bg{
-	background-image: url('../assets/img/about_bg.jpg');
+	background-image: url('../assets/img/President.jpg');
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -144,4 +144,5 @@
 		height:60px;
 		margin: 0 auto;
 		margin-top: 15px;
+		margin-bottom: 15px;
 }
