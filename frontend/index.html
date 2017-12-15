@@ -11,7 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
   <!--------------------- CSS ------------- -->
-  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
   <link rel="stylesheet" href="commonCss/index.css">
   <!-- <link rel="stylesheet" href="commonCss/font-awesome.css"> -->
@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="tourism/tourism.css">
   <link rel="stylesheet" href="culture/culture.css">
   <link rel="stylesheet" href="about/about.css">
+  <link rel="stylesheet" href="president/president.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
@@ -47,10 +48,10 @@
         </div>
         <ul ng-click="vm.isShowMenu=false" >
           <li><a ui-sref="glavnaya" >{{vm.currentText.menu.home}}</a></li>
-          <li><a href="">{{vm.currentText.menu.about}}</a></li>
+          <li><a ui-sref="about">{{vm.currentText.menu.about}}</a></li>
           <li><a ui-sref="culture">{{vm.currentText.menu.culture}}</a></li>
           <li><a ui-sref="tourism">{{vm.currentText.menu.tourism}}</a></li>
-          <li><a href="">{{vm.currentText.menu.president}}</a></li>
+          <li><a ui-sref="president">{{vm.currentText.menu.president}}</a></li>
         </ul>
         <div class="flex jc-fe">
           <button class="button blue">{{vm.currentText.menu.openMap}}</button>
@@ -113,6 +114,8 @@
   <script src="../bower_components/angular-strap/dist/angular-strap.min.js"></script>
   <script src="../bower_components/carousel/js/Carousel.js"></script>
   <script src="../bower_components/angular-scroll/angular-scroll.min.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script src="../bower_components/wow/dist/wow.min.js"></script>
   <!--- --------------- MAIN SCRIPTS -->
   <script src="commonJS/index.module.js"></script>
@@ -126,6 +129,7 @@
   <script src="tourism/tourism.js"></script>
   <script src="culture/culture.js"></script>
   <script src="about/about.js"></script>
+  <script src="president/president.js"></script>
   <script>
     new WOW().init();
   </script>

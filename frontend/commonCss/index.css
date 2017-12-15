@@ -395,6 +395,17 @@ ul.breadcrumb li+li:before {
 }
 /*------------------ BREADCRUMBS */
 
+
+.modal-content .flex{
+  justify-content: flex-end;
+}
+
+.modal-content iframe{
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+}
+
 header{
   position: absolute;
   top: 0;

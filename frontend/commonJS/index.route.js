@@ -25,5 +25,11 @@ angular.module('myApp')
                 controller:'aboutCtrl',
                 controllerAs:'vm'
             })
+            .state('president', {
+                url: '/president',
+                templateUrl: 'president/president.html',
+                controller:'presidentCtrl',
+                controllerAs:'vm'
+            })
         $urlRouterProvider.otherwise('/glavnaya');
     });

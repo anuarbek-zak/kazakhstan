@@ -1,34 +1,53 @@
 <div class="about">
-	<div class="long-bg bg-img">
-		<section class="section-1 flex">
-			<div class="bg-img main-bg"></div>
-			<div class="section-inner">
-				<h1>{{vm.currentText.section_1.title}}</h1>
-
+	<section class="section-1 flex">
+		<div class="bg-img main-bg"></div>
+		<div class="section-inner">
+			<h1>{{vm.currentText.section_1.title}}</h1>
+			<div class="undp">
+				<img src="../assets/img/author.png" alt="undp">
+				<span>UNDP</span>
+				<a href="http://www.kz.undp.org">| http://www.kz.undp.org</a>
 			</div>
-		</section>
-		<section class="section-2">
+		</div>
+	</section>
+	<section class="section-2 flex jc-sb ai-c">
+		<img src="../assets/img/earth.png" alt="earth">
+		<div class="descr">
 			<h3>{{vm.currentText.section_2.title}}</h3>
 			<p>{{vm.currentText.section_2.text}}</p>
-		</section>
-		<section class="section-3">
-			<div ng-repeat="sectIndex in vm.sects">
-				<div  class="img-descr flex jc-sb ai-c" ng-class="{'flex-reverse':sectIndex%2==0}" >
-					<img class="img" ng-src="{{vm.currentText.section_3[sectIndex].src}}" alt="">
-					<div class="descr">
-						<div class="index flex ai-c">
-							<span class="number flex flex-center">{{sectIndex}}</span>
-							<span class="text">{{vm.currentText.section_3.cultureElements}}</span>
-						</div>
-						<div class="title-text">
-							<h4>{{vm.currentText.section_3[sectIndex].title}}</h4>
-							<p>{{vm.currentText.section_3[sectIndex].text}}</p>
-							<a href="{{vm.currentText.section_3[sectIndex].link}}"><img src="../assets/img/Arrow Right.png" alt="arrow"></a>
-						</div>
-					</div>
-				</div>
-				<div class="border-bottom"></div>
+			<button ng-click="vm.isShowVideo=true" class="button">{{vm.currentText.section_2.watch}}</button>
+		</div>
+	</section>
+	<section class="section-3 flex">
+		<div class="descr">
+			<h3>{{vm.currentText.section_3.title}}</h3>
+			<p ng-repeat="paragraph in vm.currentText.section_3.text">{{paragraph}}</p>
+		</div>
+		<div class="bg-img"></div>
+	</section>
+	<section class="section-4">
+		<div class="descr">
+			<h3>{{vm.currentText.section_4.title}}</h3>
+			<p>{{vm.currentText.section_4.text}}</p>
+		</div>
+		<img src="../assets/img/colorful.png" alt="colors">
+	</section>
+	<section class="section-3 flex flex-reverse">
+		<div class="descr">
+			<h3>{{vm.currentText.section_5.title}}</h3>
+			<p ng-repeat="paragraph in vm.currentText.section_5.text">{{paragraph}}</p>
+		</div>
+		<div class="bg-img"></div>
+	</section>
+
+	<div ng-if="vm.isShowVideo" class="bg-black flex flex-center">
+		<div  class="modal-content">
+			<div class="flex">
+				<span ng-click="vm.isShowVideo=false" class="close">&times;</span>
 			</div>
-		</section>
+			<iframe width="620" height="415"
+			src="https://www.youtube.com/embed/vQx6-o2rFK8">
+		</iframe> 
 	</div>
+
 </div>

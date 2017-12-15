@@ -343,12 +343,3 @@
 	cursor: pointer;
 }
 
-.glavnaya .modal-content .flex{
-  justify-content: flex-end;
-}
-
-.glavnaya .modal-content iframe{
-  margin: 0 auto;
-  display: block;
-  border-radius: 5px;
-}
