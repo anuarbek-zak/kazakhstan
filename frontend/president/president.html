@@ -24,8 +24,8 @@
 		<h3>{{vm.currentText.section_4.title_first}} <b>{{vm.currentText.section_4.title_second}}</b></h3>
 		<div class="orange-line"></div>
 
-		<p>{{vm.currentText.section_4.text}}</p>
-		<div class="slider" >
+		<p class="text">{{vm.currentText.section_4.text}}</p>
+<!-- 		<div class="slider" >
 			<div uib-carousel active="0" interval="2500" no-wrap="false">
 				<div uib-slide ng-repeat="slide in vm.slides track by $index" index="$index">
 					<div class="quote-div">
@@ -34,7 +34,15 @@
 					<div class="bg-img"></div>
 				</div>
 			</div>
+		</div> -->
+		<div class="quote-container">
+			<div class="quote-div">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.</p>
+			</div>
+									<div class="bg-img"></div>
+
 		</div>
+
 	</section>
 
 	<div ng-if="vm.isShowVideo" class="bg-black flex flex-center">

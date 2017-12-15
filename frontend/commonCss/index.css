@@ -372,6 +372,7 @@ body{
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
+  background-color: transparent;
 }
 
 /* Display list items side by side */
@@ -384,7 +385,8 @@ ul.breadcrumb li {
 
 /* Display list items side by side */
 ul.breadcrumb li.active {
-  opacity: 1
+  opacity: 1;
+  color: #fff;
 }
 
 /* Add a slash symbol (/) before/behind each list item */

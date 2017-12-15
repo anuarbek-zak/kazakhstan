@@ -100,7 +100,7 @@
 	font-weight: bold;
 }
 
-.president .section-4 p{
+.president .section-4 p.text{
 	color: #999;
 	width: 70%;
 	margin: 0 auto;
@@ -119,19 +119,29 @@
 	margin-top: 0px;
 }
 
-.president .section-4 .slider .quote-div{
+.president .section-4 .quote-div{
 	width: 60%;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 30px;
 	border:1px solid #999;
 	border-radius: 5px;
 	background-image: url('../assets/img/quotes.png');
-	background-size: 40px 40px;
+	background-size: 28px 28px;
 	background-repeat: no-repeat;
+	background-position: 15px 15px;
+	position: relative;	
 }
 
-.president .section-4 .slider .quote-div p{
+.president .section-4 .quote-div p{
 		color: #999;
 	line-height: 1.5;
 	text-align: center;
+}
+
+.president .section-4 .quote-container .bg-img{
+		background-image: url('../assets/img/quote_avatar.png');
+		width:60px;
+		height:60px;
+		margin: 0 auto;
+		margin-top: 15px;
 }
