@@ -1,14 +1,19 @@
-angular.module('myApp').controller('presidentCtrl',function ($scope,$http,$state,$localStorage,$document) {
+angular.module('myApp').controller('presidentCtrl',function ($scope,$http,$state,$localStorage,$document,$location,$anchorScroll) {
 	var vm = this;
 	vm.currentLang = 'eng';
 	vm.isShowVideo = false;
 	vm.slides = [1,2,3];
-	
+		$location.hash('anchor');
+	$anchorScroll();
 
 	$scope.$on('changeLang', function (event, data) {
 		vm.currentLang = data;
 		vm.currentText = vm.langsTexts[vm.currentLang];
 	});
+
+	vm.openLink = function() {
+		window.open('http://personal.akorda.kz/ru/category/filmy-i-kartiny/dokumentalnyi-film-s-nazarbaevym-o-glavnom','_blank')
+	}
 
 
 	$http.get('president/president.json')

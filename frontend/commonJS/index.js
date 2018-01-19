@@ -2,11 +2,11 @@ angular.module('myApp').controller('rootCtrl',function ($scope) {
 	var vm = this;	
 });
 
-angular.module('myApp').controller('headerCtrl',function ($scope,$http,$stateParams,authService) {
+angular.module('myApp').controller('headerCtrl',function ($scope,$http,$stateParams,authService,$localStorage) {
 	var vm = this;
 	
-	vm.langs = {'eng':'English','rus':'Русский','kaz':'Қазақ'}
-	vm.currentLang = 'eng';
+	vm.langs = {'eng':'English','kaz':'Қазақ'}
+	vm.currentLang = $localStorage.currentLang;
 	vm.isShowMenu = false;
 	vm.langsTexts = [];
 
@@ -22,9 +22,9 @@ angular.module('myApp').controller('headerCtrl',function ($scope,$http,$statePar
 	vm.changeLang = function(name) {
 		vm.currentLang = name;
 		vm.currentText = vm.langsTexts[vm.currentLang];
+		$localStorage.currentLang = name;
 		$scope.$parent.$broadcast('changeLang',name);
 	}
-
 
 });
 
@@ -32,5 +32,4 @@ angular.module('myApp').controller('headerCtrl',function ($scope,$http,$statePar
 angular.module('myApp').controller('footerCtrl',function ($http,$stateParams,$localStorage,authService,$state,$scope) {
 	var vm = this;
 	vm.currentYear = (new Date()).getFullYear();
-
 });

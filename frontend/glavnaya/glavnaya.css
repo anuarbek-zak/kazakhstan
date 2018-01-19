@@ -145,7 +145,8 @@
 }
 
 .glavnaya .section-3 .title{
-	font-size: 32px;
+	font-size: 24px;
+	margin-bottom: 10px;
 }
 
 .glavnaya .section-3 .card{
@@ -183,6 +184,10 @@
 	height: 250px;
 	background-image: url('../assets/img/news1.jpg');
 	border-radius: 5px 5px 0 0;
+}
+
+.glavnaya .section-3 .card:last-child .bg-img{
+	background-image: url('../assets/img/news2.jpg');
 }
 
 .glavnaya .section-4{
@@ -341,5 +346,9 @@
 	height: 90px;
 	top: 40% !important;
 	cursor: pointer;
+}
+
+.glavnaya .section-7 .slider ul{
+	top: 0 !important;
 }
 

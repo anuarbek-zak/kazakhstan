@@ -1,9 +1,11 @@
-angular.module('myApp').controller('tourismCtrl',function ($scope,$http,$state,$localStorage,$document) {
+angular.module('myApp').controller('tourismCtrl',function ($location,$anchorScroll,$scope,$http,$state,$localStorage,$document) {
 	var vm = this;
 	vm.currentLang = 'eng';
 	vm.query = '';
 	vm.cards = [1,2,3,4,5,6,7,8];
 	vm.currentActiveCard = 0;
+	$location.hash('anchor');
+	$anchorScroll();
 
 	vm.makeCardActive = function(cardIndex) {
 		if(cardIndex==vm.currentActiveCard) vm.currentActiveCard=0;

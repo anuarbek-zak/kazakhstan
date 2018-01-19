@@ -1,7 +1,9 @@
-angular.module('myApp').controller('aboutCtrl',function ($scope,$http,$state,$localStorage,$document) {
+angular.module('myApp').controller('aboutCtrl',function ($location,$anchorScroll,$scope,$http,$state,$localStorage,$document) {
 	var vm = this;
 	vm.currentLang = 'eng';
 	vm.isShowVideo = false;
+	$location.hash('anchor');
+	$anchorScroll();
 
 	$scope.$on('changeLang', function (event, data) {
 		vm.currentLang = data;

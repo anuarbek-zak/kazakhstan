@@ -8,11 +8,15 @@
 			"president":"Leader of Nation",
 			"openMap":"open map"
 		}
-	},
-	"rus":{
-
-	},
+	},,
 	"kaz":{
-		
+		"menu":{
+			"home":"Бастапқы бет",
+			"about":"Қазақстан туралы",
+			"culture":"Культура & традиции",
+			"tourism":"Туризм",
+			"president":"Президент",
+			"openMap":"картаны ашу"
+		}
 	}
 }

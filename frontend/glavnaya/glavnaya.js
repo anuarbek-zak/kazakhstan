@@ -3,7 +3,11 @@ angular.module('myApp').controller('glavnayaCtrl',function ($scope,$http,$state,
 	vm.scrollCards = {'news':'3','about':'4','president':'5','kz2050':'6','expo':'7'};
 	vm.selectedSection = vm.scrollCards['news'];
 	vm.isShowVideo = false;
-	vm.currentLang = 'eng';
+	vm.currentLang = $localStorage.currentLang;
+
+	vm.openLink = function() {
+		window.open("https://www.tourister.ru/world/asia/kazakhstan/map#('groups':['10'])",'_blank')
+	}
 
 	$http.get('glavnaya/glavnaya.json')
 	.success(function(data) {

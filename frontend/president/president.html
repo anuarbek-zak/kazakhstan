@@ -1,4 +1,4 @@
-<div class="president">
+<div id="anchor" class="president">
 	<section class="section-1 flex">
 		<div class="bg-img main-bg"></div>
 		<div class="section-inner">
@@ -15,7 +15,7 @@
 		<div class="descr">
 			<h3>{{vm.currentText.section_3.title}}</h3>
 			<p ng-repeat="paragraph in vm.currentText.section_3.text">{{paragraph}}</p>
-			<button class="button blue">{{vm.currentText.section_3.watch}}</button>
+			<button ng-click="vm.openLink()" class="button blue">{{vm.currentText.section_3.watch}}</button> 
 		</div>
 		<div class="bg-img"></div>
 	</section>
@@ -25,16 +25,6 @@
 		<div class="orange-line"></div>
 
 		<p class="text">{{vm.currentText.section_4.text}}</p>
-<!-- 		<div class="slider" >
-			<div uib-carousel active="0" interval="2500" no-wrap="false">
-				<div uib-slide ng-repeat="slide in vm.slides track by $index" index="$index">
-					<div class="quote-div">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.</p>
-					</div>
-					<div class="bg-img"></div>
-				</div>
-			</div>
-		</div> -->
 		<div class="slider">
 			<div class="quote-container">
 				<div class="quote-div">
@@ -70,7 +60,7 @@
 <script>
 	$(document).ready(function(){
 		$('.slider').slick({
-			dots: true
+			dots:true
 		});
 	});
 </script>

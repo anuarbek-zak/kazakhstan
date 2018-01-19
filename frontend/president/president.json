@@ -20,7 +20,12 @@
 		"section_4":{
 			"title_first":"president",
 			"title_second":"quotes",
-			"text":"Today Kazakhstan focuses all efforts at Joining the world's 50 most competitive countries. In this regard Kazakhstan works strenuously at enhancing potential of local Industry ."
+			"text":"Today Kazakhstan focuses all efforts at Joining the world's 50 most competitive countries. In this regard Kazakhstan works strenuously at enhancing potential of local Industry .",
+			"quotes":[
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident."
+			]
 			}
 	},
 	"rus":{
