@@ -82,16 +82,11 @@
 	letter-spacing: 1.5px;
 	word-spacing: 5px
 		font-family: 'Avenir';
-
-}
-
-.culture .section-3 .descr{
-	margin-left: 120px;
 }
 
 .culture .section-3 .title-text{
 	padding-left: 35px;
-	width: 330px;
+	width:400px;
 }
 
 .culture .section-3 .title-text h4{

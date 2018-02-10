@@ -6,9 +6,9 @@
 			"culture":"Culture & traditions",
 			"tourism":"Tourism",
 			"president":"Leader of Nation",
-			"openMap":"open map"
+			"timeline":"Timeline"
 		}
-	},,
+	},
 	"kaz":{
 		"menu":{
 			"home":"Бастапқы бет",
@@ -16,7 +16,7 @@
 			"culture":"Культура & традиции",
 			"tourism":"Туризм",
 			"president":"Президент",
-			"openMap":"картаны ашу"
+			"timeline":"Уақыт сызығы"
 		}
 	}
 }

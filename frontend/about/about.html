@@ -1,17 +1,17 @@
 <div class="about" id="anchor">
 	<section class="section-1 flex">
-		<div class="bg-img main-bg"></div>
+		<div id="main-bg" class="bg-img main-bg"></div>
 		<div class="section-inner">
 			<h1>{{vm.currentText.section_1.title}}</h1>
 			<div class="undp">
-				<img src="../assets/img/author.png" alt="undp">
+				<img src="../frontend/assets/img/author.png" alt="undp">
 				<span>UNDP</span>
 				<a href="http://www.kz.undp.org">| http://www.kz.undp.org</a>
 			</div>
 		</div>
 	</section>
 	<section class="section-2 flex jc-sb ai-c">
-		<img src="../assets/img/earth.png" alt="earth">
+		<img src="../frontend/assets/img/earth.png" alt="earth">
 		<div class="descr">
 			<h3>{{vm.currentText.section_2.title}}</h3>
 			<p>{{vm.currentText.section_2.text}}</p>
@@ -30,7 +30,7 @@
 			<h3>{{vm.currentText.section_4.title}}</h3>
 			<p>{{vm.currentText.section_4.text}}</p>
 		</div>
-		<img src="../assets/img/colorful.png" alt="colors">
+		<img src="../frontend/assets/img/colorful.png" alt="colors">
 	</section>
 	<section class="section-3 flex flex-reverse">
 		<div class="descr">
@@ -40,13 +40,13 @@
 		<div class="bg-img"></div>
 	</section>
 
-	<div ng-if="vm.isShowVideo" class="bg-black flex flex-center">
-		<div  class="modal-content">
-			<div class="flex">
+	<div ng-click="vm.isShowVideo=false"  ng-if="vm.isShowVideo" class="bg-black flex flex-center">
+		<div ng-click="$event.stopPropagation()" data-wow-duration=".5s"  class="fadeInDown wow modal-content">
+			<div class="close-container flex">
 				<span ng-click="vm.isShowVideo=false" class="close">&times;</span>
 			</div>
-			<iframe width="620" height="415"
-			src="https://www.youtube.com/embed/vQx6-o2rFK8">
+			<iframe width="720" height="450"
+			src="https://www.youtube.com/embed/W0QhDmoiH7E?autoplay=0&showinfo=0&controls=0">
 		</iframe> 
 	</div>
 

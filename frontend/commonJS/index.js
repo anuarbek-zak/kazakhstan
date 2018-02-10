@@ -1,14 +1,26 @@
-angular.module('myApp').controller('rootCtrl',function ($scope) {
+angular.module('myApp').controller('rootCtrl',function ($state,$scope,$localStorage,$http,$rootScope) {
 	var vm = this;	
-});
 
-angular.module('myApp').controller('headerCtrl',function ($scope,$http,$stateParams,authService,$localStorage) {
-	var vm = this;
-	
+	vm.timelineData = {};
 	vm.langs = {'eng':'English','kaz':'Қазақ'}
 	vm.currentLang = $localStorage.currentLang;
 	vm.isShowMenu = false;
 	vm.langsTexts = [];
+	vm.currentYear = (new Date()).getFullYear();
+	vm.openTimelineInfo = false
+
+	$scope.$on("isTimelineActive", function(e,bool){
+		vm.isTimelineActive = bool;
+	});
+
+	$scope.$on("openTimelineInfo", function(e){
+		vm.openTimelineInfo = true;
+	});
+
+	vm.closeTimelineInfo = function(){
+		vm.openTimelineInfo = false;
+		$scope.$broadcast('closeTimeLineInfo',{})
+	}
 
 	$http.get('commonJS/index.json')
 	.success(function(data) {
@@ -26,10 +38,13 @@ angular.module('myApp').controller('headerCtrl',function ($scope,$http,$statePar
 		$scope.$parent.$broadcast('changeLang',name);
 	}
 
-});
+	vm.changeState = function(state){
+		vm.isShowMenu = false;
+		$state.go(state)
+	}
 
-
-angular.module('myApp').controller('footerCtrl',function ($http,$stateParams,$localStorage,authService,$state,$scope) {
-	var vm = this;
-	vm.currentYear = (new Date()).getFullYear();
+	$rootScope.$on('$stateChangeStart', 
+		function(event, toState, toParams, fromState, fromParams){ 
+			if(toState.name!=fromState.name) $('.loader-bg').show();
+		})
 });

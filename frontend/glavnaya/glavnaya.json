@@ -24,8 +24,32 @@
 		"section_3":{
 			"title":"Latest popular news",
 			"bgText":"news",
-			"descriptionTitle":"Astana in the top 10 of world capital's competition",
-			"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+			"cards":[
+				{
+					"descriptionTitle":"Astana in the top 10 of world capital's competition",
+					"link":"https://astanatimes.com",
+					"src":"../frontend/assets/img/news4.jpg",
+					"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+				},
+				{
+					"descriptionTitle":"Astana in the top 10 of world capital's competition",
+					"link":"http://atameken.kz/en/",
+					"src":"../frontend/assets/img/news1.jpg",
+					"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+				},
+				{
+					"descriptionTitle":"Astana in the top 10 of world capital's competition",
+					"link":"http://www.inform.kz/eng",
+					"src":"../frontend/assets/img/news2.jpg",
+					"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+				},
+				{
+					"descriptionTitle":"Astana in the top 10 of world capital's competition",
+					"link":"https://bnews.kz/en",
+					"src":"../frontend/assets/img/news3.jpg",
+					"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+				}
+			]
 		},
 		"section_4":{
 			"descriptionTitle":{
@@ -56,65 +80,10 @@
 			"text":"It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source"			
 		}
 	},
-	"rus":{
-		"readMore":"Узнать больше",
-		"section_1":{
-			"kaz":"Казахстан",
-			"welcome":"Добро пожаловать в сердце Евразии!",
-			"watchVideo":"Смотреть видео",
-			"search":"Найти в Казахстане"
-		},
-		"section_2":{
-			"popularSearchTitle":"Популярные запросы: ",
-			"popularSearchText":" президент, Астана, горы, рестораны",
-			"newsTitle":"Новости",
-			"newsText":"Последние новости: Политика,правительство,нация,спорт,образование",
-			"aboutTitle":"О Казахстане",
-			"aboutText":"Исследуй страну: история,культура,ценности,достопримечательности",
-			"presidentTitle":"Президент",
-			"presidentText":"Лидер нации: Биография,конституция,Нур Отан,книги",
-			"kz2050Title":"Казахстан 2050",
-			"kz2050Text":"Время для отдыха: Концерты,кино,выставки",
-			"expoTitle":"Expo 2017",
-			"expoText":"Энергия будущего: События,Гости,Галлерея"
-		},
-		"section_3":{
-			"title":"Последние новости",
-			"descriptionTitle":"55 интересных фактов",
-			"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
-		},
-		"section_4":{
-			"descriptionTitle":{
-				"first":"О Казахстане",
-				"second":"История"
-			},
-			"descriptionText":{
-				"first":"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-				"second":"It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source."
-			}
-		},
-		"section_5":{
-			"title":"Первый президент страны",
-			"quoteBy":"Abishevich Nursultan Nazarbayev",
-			"quote":"«We must strive to encourage East and West not only to move towards each other but also to encourage them to find a new philosophy, a philosophy which will serve as a tool determining the future of Planet Earth - our common and only shelte»"
-		},
-		"section_6":{
-			"title":"Глабальные события в стране",
-			"text":"It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source",
-			"card":{
-				"title":"«Kazakhstan 2050» strategy",
-				"text":"We must strive to encourage East and West not only to move towards each other but also to encourage them to find a new philosophy, a philosophy which will serve as a tool determining the future of Planet Earth - our common and only shelte"
-			}
-		},
-		"section_7":{
-			"title":"EXPO - 2017 Ануарбек",
-			"text":"It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source"			
-		}
-	},
 	"kaz":{
 		"readMore":"Кобірек оқу",
 		"section_1":{
-			"kaz":"Қазқстан",
+			"kaz":"Қазақстан",
 			"welcome":"Еуразия жүрегіне қош келдіңіз!",
 			"watchVideo":"Видео қарау",
 			"search":"Қазақстанда іздеу"
@@ -136,8 +105,32 @@
 		"section_3":{
 			"title":"Latest popular news",
 			"bgText":"news",
-			"descriptionTitle":"Astana in the top 10 world bla bla",
-			"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+			"cards":[
+				{
+					"descriptionTitle":"Astana in the top 10 of world capital's competition",
+					"link":"https://astanatimes.com",
+					"src":"../frontend/assets/img/news4.jpg",
+					"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+				},
+				{
+					"descriptionTitle":"Astana in the top 10 of world capital's competition",
+					"link":"http://atameken.kz/en/",
+					"src":"../frontend/assets/img/news1.jpg",
+					"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+				},
+				{
+					"descriptionTitle":"Astana in the top 10 of world capital's competition",
+					"link":"http://www.inform.kz/eng",
+					"src":"../frontend/assets/img/news2.jpg",
+					"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+				},
+				{
+					"descriptionTitle":"Astana in the top 10 of world capital's competition",
+					"link":"https://bnews.kz/en",
+					"src":"../frontend/assets/img/news3.jpg",
+					"descriptionText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's "
+				}
+			]
 		},
 		"section_4":{
 			"descriptionTitle":{

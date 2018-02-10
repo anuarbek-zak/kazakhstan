@@ -3,6 +3,10 @@
 	position: relative;
 }
 
+.about .modal-content .close{
+	margin-top: -12px;
+}
+
 .about .section-1{
 	position: relative;
 	padding: 50px 140px;

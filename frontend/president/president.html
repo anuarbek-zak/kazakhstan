@@ -1,6 +1,6 @@
 <div id="anchor" class="president">
 	<section class="section-1 flex">
-		<div class="bg-img main-bg"></div>
+		<div id="main-bg" class="bg-img main-bg"></div>
 		<div class="section-inner">
 			<h1>{{vm.currentText.section_1.title}}</h1>
 		</div>
@@ -15,7 +15,7 @@
 		<div class="descr">
 			<h3>{{vm.currentText.section_3.title}}</h3>
 			<p ng-repeat="paragraph in vm.currentText.section_3.text">{{paragraph}}</p>
-			<button ng-click="vm.openLink()" class="button blue">{{vm.currentText.section_3.watch}}</button> 
+			<button ng-click="vm.openLink('http://personal.akorda.kz/ru/category/filmy-i-kartiny/dokumentalnyi-film-s-nazarbaevym-o-glavnom')" class="button blue">{{vm.currentText.section_3.watch}}</button> 
 		</div>
 		<div class="bg-img"></div>
 	</section>
@@ -41,19 +41,7 @@
 
 			</div>
 		</div>
-		
-
 	</section>
-
-	<div ng-if="vm.isShowVideo" class="bg-black flex flex-center">
-		<div  class="modal-content">
-			<div class="flex">
-				<span ng-click="vm.isShowVideo=false" class="close">&times;</span>
-			</div>
-			<iframe width="620" height="415"
-			src="https://www.youtube.com/embed/vQx6-o2rFK8">
-		</iframe> 
-	</div>
 
 </div>
 

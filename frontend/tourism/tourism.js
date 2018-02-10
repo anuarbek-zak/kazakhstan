@@ -1,32 +1,27 @@
-angular.module('myApp').controller('tourismCtrl',function ($location,$anchorScroll,$scope,$http,$state,$localStorage,$document) {
+angular.module('myApp').controller('tourismCtrl',function (vmService,$location,$anchorScroll,$scope,$http,$state,$localStorage,$document) {
 	var vm = this;
-	vm.currentLang = 'eng';
 	vm.query = '';
-	vm.cards = [1,2,3,4,5,6,7,8];
-	vm.currentActiveCard = 0;
-	$location.hash('anchor');
-	$anchorScroll();
+	vm.cards = [];
+	vm.currentActiveCard = -1;
+	vmService.init(vm,$scope,'tourism',func,func);
 
-	vm.makeCardActive = function(cardIndex) {
-		if(cardIndex==vm.currentActiveCard) vm.currentActiveCard=0;
-		else vm.currentActiveCard=cardIndex
+	function func(){
+		vm.cards = vm.currentText.section_2.cards;
 	}
 
-$scope.$on('changeLang', function (event, data) {
-	vm.currentLang = data;
-	vm.currentText = vm.langsTexts[vm.currentLang];
-});
+	vm.makeCardActive = function(cardIndex) {
+		if((cardIndex+1)%3==0){
+			temp = vm.cards[cardIndex-1];
+			vm.cards[cardIndex-1] = vm.cards[cardIndex];
+			vm.cards[cardIndex] = temp;
+			cardIndex--;
+		}
+		if(cardIndex==vm.currentActiveCard) vm.currentActiveCard=-1;
+		else vm.currentActiveCard=cardIndex;
+	}
 
-$http.get('tourism/tourism.json')
-.success(function(data) {
-	vm.langsTexts = data;
-	vm.currentText = vm.langsTexts[vm.currentLang];
-})
-.error(function(err) {
-	console.log(err)
-})
-
-vm.submitQuery = function () {
-	window.open('http://google.com/search?q='+vm.query)
-}
+	vm.readMore = function(query){
+		vm.query = query;
+		vm.submitQuery();
+	}
 });

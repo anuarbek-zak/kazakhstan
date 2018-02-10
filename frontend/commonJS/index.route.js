@@ -31,5 +31,11 @@ angular.module('myApp')
                 controller:'presidentCtrl',
                 controllerAs:'vm'
             })
+            .state('timeline', {
+                url: '/timeline',
+                templateUrl: 'timeline/timeline.html',
+                controller:'timelineCtrl',
+                controllerAs:'vm'
+            })
         $urlRouterProvider.otherwise('/glavnaya');
     });
