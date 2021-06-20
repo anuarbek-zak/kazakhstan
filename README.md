@@ -1,1 +1,1 @@
-Front-end Project with cool design and animations for competition - https://zakiryanov.github.io/projects/Kazakhstan/frontend/#/glavnaya#anchor
+Front-end Project with cool design and animations for competition - https://zakiryanov.github.io/projects/Kazakhstan/frontend/#/glavnaya#anchor , https://zakiryanov.github.io/projects/Kazakhstan/frontend/#/timeline#anchor
